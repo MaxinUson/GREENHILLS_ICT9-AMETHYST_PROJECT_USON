@@ -2,6 +2,31 @@
 <html>
 <head>
   <title>Length Conversion Calculator</title>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+   <style>
+  div {
+    border-style: solid;
+  }
+ 
+  .btn {
+    display: inline-block;
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+    text-align: center;
+    text-decoration: none;
+    outline: none;
+    border: none;
+    border-radius: 5px;
+    background-color: #007bff;
+    color: #fff;
+  }
+
+  .btn:hover {
+    background-color: #0069d9;
+  }
+</style>
   <script>
     function convertLength(conversionType) {
       // Get input value
@@ -23,16 +48,24 @@
   </script>
 </head>
 <body>
-  <h1>Length Conversion Calculator</h1>
-  <label for="millimeters">Millimeters:</label>
-  <input type="number" id="millimeters" step="any" />
-  <br>
-  <p>Conversion Type:</p>
-  <button onclick="convertLength('centimeters')">Convert to Centimeters</button>
-  <button onclick="convertLength('meters')">Convert to Meters</button>
-  <button onclick="convertLength('kilometers')">Convert to Kilometers</button>
-  <br>
-  <p id="result"></p>
+  <table class="container-fluid table striped table-bordered table-hover">
+  <tr>
+    <td colspan="3" class="table-primary">Length Conversion Calculator</td>
+  </tr>
+  <tr>
+    <td class="table-secondary" colspan="1.5">Millimeters:</td>
+    <td colspan="2"><input type="number" id="millimeters" step="any" /></td>
+  </tr>
+  <tr>
+    <td class="table-secondary" colspan="3">Conversion Type:</td></tr>
+  <tr>
+    <td><button class="btn" onclick="convertLength('centimeters')">Convert to Centimeters</button></td>
+    <td><button class="btn" onclick="convertLength('meters')">Convert to Meters</button></td>
+    <td><button class="btn" onclick="convertLength('kilometers')">Convert to Kilometers</button></td>
+  </tr>
+  <tr>
+    <td class="table-primary" colspan="3"><p id="result"></p></td>
+  </tr>
+</table>
 </body>
 </html>
-
